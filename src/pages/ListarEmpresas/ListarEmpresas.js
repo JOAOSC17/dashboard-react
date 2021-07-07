@@ -2,8 +2,8 @@ import React from 'react'
 import './ListarEmpresas.css'
 const ListarEmpresas = () => {
     return (
-      <div>
-        <main>
+    <div>
+      <main>
             <div id="title">
                 <h1><i class="fas fa-chevron-left"></i> Empresas</h1>
             </div>
@@ -71,9 +71,9 @@ const ListarEmpresas = () => {
   <i class="fas fa-angle-double-right"></i>
   </div>
 </form>
-        </main>
-        <footer><span><i class="fas fa-plus"></i></span></footer>
-        </div>
+</main>
+<footer><span><i class="fas fa-plus"></i></span></footer> 
+</div>
     )
 }
 
