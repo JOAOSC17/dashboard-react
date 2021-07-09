@@ -1,63 +1,43 @@
-import React from 'react'
+import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom'
+import styled from 'styled-components';
 import './ListarEmpresas.css'
+import TableBody from './TableBody/TableBody';
 const ListarEmpresas = () => {
+  const MoreLink = styled(Link)`
+    display: flex;
+    justify-content: center;
+    margin-left:.7rem;
+    border: none;
+    text-decoration:none;
+`;
+const BackLink = styled(Link)`
+    color:white;
+    text-decoration:none;
+`;
     return (
     <div>
-      <main>
+      <main className="lista">
             <div id="title">
-                <h1><i class="fas fa-chevron-left"></i> Empresas</h1>
+                <h1><BackLink to="/"><i class="fas fa-chevron-left"></i></BackLink> Empresas</h1>
             </div>
             <table>
   <tr>
     <th>Identificação <i class="fas fa-chevron-down"></i></th>
     <th>Cidade/UF</th> 
     <th>CEP</th>
-    <th>Data de Abertura</th>
+    <th>Data de Abertura
+    </th>
+    
   </tr>
-  <tr>
-  <td id="name"><span id="icon"><i class="fas fa-user"></i></span><div id="line">Facebook Inc.<br/><span>31.425.024/0001-16</span></div></td>
-    <td>Curitiba/PR</td>
-    <td>80.320-320</td>
-    <td>08/2020</td>
-    <td><i class="fas fa-ellipsis-v"></i></td>
-  </tr>
-  <tr>
-  <td id="name"><span id="icon"><i class="fas fa-user"></i></span><div id="line">Facebook Inc.<br/><span>31.425.024/0001-16</span></div></td>
-    <td>Curitiba/PR</td>
-    <td>80.320-320</td>
-    <td>08/2020</td>
-    <td><i class="fas fa-ellipsis-v"></i></td>
-  </tr>
-  <tr>
-  <td id="name"><span id="icon"><i class="fas fa-user"></i></span><div id="line">Facebook Inc.<br/><span>31.425.024/0001-16</span></div></td>
-    <td>Curitiba/PR</td>
-    <td>80.320-320</td>
-    <td>08/2020</td>
-    <td><i class="fas fa-ellipsis-v"></i></td>
-  </tr>
-  <tr>
-  <td id="name"><span id="icon"><i class="fas fa-user"></i></span><div id="line">Facebook Inc.<br/><span>31.425.024/0001-16</span></div></td>
-    <td>Curitiba/PR</td>
-    <td>80.320-320</td>
-    <td>08/2020</td>
-    <td><i class="fas fa-ellipsis-v"></i></td>
-  </tr>
-  <tr>
-  <td id="name"><span id="icon"><i class="fas fa-user"></i></span><div id="line">Facebook Inc.<br/><span>31.425.024/0001-16</span></div></td>
-    <td>Curitiba/PR</td>
-    <td>80.320-320</td>
-    <td>08/2020</td>
-    <td><i class="fas fa-ellipsis-v"></i></td>
-  </tr>
-  <tr>
-  <td id="name"><span id="icon"><i class="fas fa-user"></i></span><div id="line">Facebook Inc.<br/><span>31.425.024/0001-16</span></div></td>
-    <td>Curitiba/PR</td>
-    <td>80.320-320</td>
-    <td>08/2020</td>
-    <td><i class="fas fa-ellipsis-v"></i></td>
-  </tr>
-</table>
-  <form action="">
+  <TableBody/>
+<TableBody/>
+<TableBody/>
+<TableBody/>
+<TableBody/>
+<TableBody/>
+ </table>
+  <form action="" className="form">
   <label for="pag">Página</label>
   <select id="pag" name="pags">
     <option value="one">1</option>
@@ -72,7 +52,7 @@ const ListarEmpresas = () => {
   </div>
 </form>
 </main>
-<footer><span><i class="fas fa-plus"></i></span></footer> 
+<footer><span><MoreLink to="/cadastro"><i class="fas fa-plus"></i></MoreLink></span></footer> 
 </div>
     )
 }

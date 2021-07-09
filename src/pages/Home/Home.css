@@ -1,9 +1,9 @@
-main{
+.home{
     display: flex;
     margin-left: 5rem;
     margin-top: 1rem;
 }
-main h1{
+.home h1{
     font-weight: 500;
     color: #343E47;
 }

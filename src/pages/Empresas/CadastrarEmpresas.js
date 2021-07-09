@@ -1,17 +1,23 @@
 import React from 'react'
 import './CadastrarEmpresas.css'
+import styled from 'styled-components';
+import { Link } from 'react-router-dom'
 const CadastrarEmpresas = () => {
+    const BackLink = styled(Link)`
+    color:white;
+    text-decoration:none;
+`;
     return (
         <div className="cadastro">
             <div id="title">
-                <h1><span><i class="fas fa-chevron-left"></i> Empresas/</span>Cadastrar Empresa</h1>
+                <h1><span><BackLink to="/lista"><i class="fas fa-chevron-left"></i></BackLink> Empresas/</span>Cadastrar Empresa</h1>
             <button type="submit">Salvar</button>
             </div>
             <section className="docsSection">
                 <div id="photo">
                 <label for="photoUser"><i class="fas fa-user-circle"></i></label><input id="photoUser" type="file" name="photo"/></div>
                 <div className="docs">
-                <label for="typeOfDocs">Tipo de Documento</label>
+                <label for="typeOfDocs" id="label">Tipo de Documento</label>
                 <select style={{width: "150px"}} id="typeOfDocs" name="typeOfDocs">
                 <option value="cpf">CPF</option>
                 <option value="cnpj">CNPJ</option>

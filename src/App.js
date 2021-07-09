@@ -4,17 +4,33 @@ import Home from './pages/Home/Home';
 import ListarEmpresas from './pages/ListarEmpresas/ListarEmpresas';
 import CadastrarEmpresas from './pages/Empresas/CadastrarEmpresas';
 import EditarEmpresa from './pages/Empresas/EditarEmpresa';
-
-/*<Home/>
-<ListarEmpresas/>
-
-      <CadastrarEmpresas/>*/
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+/*
+*/
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Header/>
+      <Switch>
+      <Route exact path="/" >
+      <Home/>
+      </Route>
+      <Route path="/lista">
+      <ListarEmpresas/>
+      </Route>
+      <Route path="/cadastro">
+      <CadastrarEmpresas/>
+      </Route>
+      <Route path="/editar">
       <EditarEmpresa/>
-    </div>
+      </Route>
+      <Route path="*">
+      <header>
+        ESSA PÁGINA NÃO EXISTE
+      </header>
+      </Route>
+      </Switch>
+    </Router>
   );
 }
 
